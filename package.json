@@ -1,0 +1,26 @@
+{
+  "author": "Rodolfo Marques",
+  "description": "test repository for pm2 configuration in a monorepo setup",
+  "dependencies": {},
+  "devDependencies": {
+    "pm2": "^5.2.0"
+  },
+  "keywords": [],
+  "license": "UNLICENSED",
+  "main": "index.js",
+  "name": "root-pm2",
+  "private": true,
+  "scripts": {
+    "build": "yarn workspaces run build",
+    "clean": "yarn workspaces run clean",
+    "lint": "yarn workspaces run lint",
+    "start": "yarn workspaces run start",
+    "reset": "yarn workspaces run clean && if [ -d node_modules ]; then rm -Rf node_modules; fi",
+    "test": "yarn workspaces run test"
+  },
+  "version": "0.0.0",
+  "workspaces": [
+    "packages/hello_a",
+    "packages/hello_b"
+  ]
+}

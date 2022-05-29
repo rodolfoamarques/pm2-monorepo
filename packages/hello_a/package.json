@@ -1,0 +1,16 @@
+{
+  "dependencies": {},
+  "devDependencies": {},
+  "displayName": "Hello A",
+  "name": "@pm2/hello_a",
+  "private": true,
+  "scripts": {
+    "prebuild": "yarn lint",
+    "build": "echo 'build'",
+    "clean": "if [ -d node_modules ]; then rm -Rf node_modules; fi",
+    "lint": "echo 'lint'",
+    "start": "node index.js",
+    "test": "echo 'test'"
+  },
+  "version": "1.0.0"
+}
